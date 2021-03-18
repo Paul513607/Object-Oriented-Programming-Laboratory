@@ -1,4 +1,4 @@
-//ar fi fost mai simplu sa adaug si un int val (sa retin nr in baza 10
+//ar fi fost mai simplu sa adaug si un int val (sa retin nr in baza 10)
 
 class Number
 {
