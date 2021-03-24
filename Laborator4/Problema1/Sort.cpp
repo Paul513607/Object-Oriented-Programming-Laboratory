@@ -55,6 +55,20 @@ Sort::Sort(const char *s)
     }
 }
 
+bool compare(int x,int y,bool ascendent)
+{
+    if (ascendent==true)
+    {
+        if (x>=y) return true;
+        return false;
+    }
+    else
+    {
+        if (x<=y) return true;
+        return false;
+    }
+}
+
 void inter(int &x,int &y)
 {
     int aux=x;
@@ -69,7 +83,7 @@ void Sort::InsertSort(bool ascendent)
     {
         temp=v[i];
         j=i-1;
-        while (j>=0 && v[j]>temp)
+        while (j>=0 && compare(v[j],temp,ascendent))
         {
             v[j+1]=v[j];
             j--;
@@ -78,14 +92,14 @@ void Sort::InsertSort(bool ascendent)
     }
 }
 
-int partitions(int v[],int l,int h)
+int partitions(int v[],int l,int h,bool ascendent)
 {
     int temp=v[l],i=l+1,j=h;
     while (i<=j)
     {
-        while (v[i]<=temp)
+        while (!compare(v[i],temp,ascendent))
             i++;
-        while (v[j]>=temp)
+        while (compare(v[j],temp,ascendent))
             j--;
         if (i<j)
         {
@@ -107,7 +121,7 @@ void Sort::QuickSort(bool ascendent)
     {
         h=st[top--];
         l=st[top--];
-        p=partitions(v,l,h);
+        p=partitions(v,l,h,ascendent);
         if (p-1>l)
         {
             st[++top]=l;
@@ -119,7 +133,6 @@ void Sort::QuickSort(bool ascendent)
             st[++top]=h;
         }
     }
-    ascendent=true;
 }
 
 void Sort::BubbleSort(bool ascendent)
@@ -128,8 +141,8 @@ void Sort::BubbleSort(bool ascendent)
     do
     {
         ok=0;
-        for (i=0; i<m; ++i)
-            if (v[i]>v[i+1])
+        for (i=0; i<m-1; ++i)
+            if (compare(v[i],v[i+1],ascendent))
             {
                 inter(v[i],v[i+1]);
                 ok=1;
