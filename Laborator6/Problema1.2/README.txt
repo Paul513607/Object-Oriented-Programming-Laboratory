@@ -1,0 +1,1 @@
+Am apucat sa refac in mare codul, mai lipsesc niste chestii e.g. de la afisare si lipseste separarea in headere si cpp-uri diferite. Also, mai trebuiau adaugati niste constructori pe la clase ca sa am niste exemple basic.
