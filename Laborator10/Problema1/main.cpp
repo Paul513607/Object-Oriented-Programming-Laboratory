@@ -55,7 +55,7 @@ int main()
 	{
 		arr2[1] = 400;
 		arr2[-3] = 800;
-		arr2[2] = 500;  // Nu se va apela (recomandat ar fi sa folosim try--catch pentru fiecare arr2[index]
+		arr2[2] = 500;  // Nu se va apela (recomandat ar fi sa folosim try--catch pentru fiecare arr2[index])
 	}
 	catch (std::exception& e)
 	{
