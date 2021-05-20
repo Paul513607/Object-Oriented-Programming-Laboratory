@@ -1,0 +1,14 @@
+1. Create a std::vector of string elements. Sort that vector using a lambda expression that compares two strings based on their length first and then lexicographical.
+
+2. Write a lambda expression that returns the biggest number from a list of integers.
+
+3. Create a vector with int values of your own implementation that includes functions like Add and Delete.
+class MyVector 
+{ 
+     bool Add(int); // return true if the value was added. As a result, the size of the vector increases with one.
+     bool Delete(int index); // returns true if the value from the index was removed. As a result, the size of the vector decreases with one.
+}
+Add two methods Iterate and Filter. The first one iterates through all of the elements in the vector and changes each element based on a lambda function received as an argument. 
+The second function removes all elements from the vector that are matched by a lambda function received as an argument.
+
+La problema 3 Iterate si Filter sunt echivalente cu for_each si remove_if din std.

@@ -1,0 +1,1 @@
+Voiam sa implementez functiile Iterate si Filter cu proprii mei iteratori pentru MyVector, dar nu am mai avut timp.
